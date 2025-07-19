@@ -1,0 +1,19 @@
+Wordocra, tek-parmak kelime oyunlarının ilkelliğine karşı sosyallik, YZ-güçlü kişiselleştirilmiş deneyim sunarken anadilinde olmayan derin anlamlı kavramları öğretip çocukluktan beri yaşanılmayan "yeni kavram!" gelişimini ve dopamin salgılatmasını yaşatan eşsiz, sosyal, modern, casual bir Kelime Bulmacasıdır.
+
+Odaklandığımız problem: Kelime kategorisini domine eden tek elle oynanabilir oyunlar, insanın doğası ve en temel motivasyonu olan sosyalliği karşılıksız bırakmasıyla birlikte kategorisiz, dondurulmuş kelime havuzlarıyla kitle pazarında tekel kurdukları için kullanıcıları yalnız, ilkel ve ilgisiz bırakıyor.
+
+Motivasyonumuz: Toplumun daralan kelime havuzunu derin anlamlı, anadilinde karşılığı olmayan kavramlarla genişleterek yeni sinaptik bağlar kurulmasını, hayal dünyalarının genişlemesini ve düşünce dünyalarının seviye atlamasını sağlayarak çocukluktan sonra ilk kez “yeni kavram!” dopaminini tüm toplulukla aynı anda hissettirmek ve bu süreci kanıtlanmış bir mekanikle -tek elle oynanabilir-, insan ihtiyaçlarına-doğasına karşılık olacak inovasyonlarla oyunlaştırarak Wordocra’yı bilgi çağının eşsiz bir modülü haline getirmek.
+
+
+ÇÖZÜMLERİMİZ:
+1. Çevrimiçi: Arkadaş listeleri, rekabetçi mod, yerel liderlik tablosu.
+2. YZ-kişiselleştirme: Oyuncunun ilgi alanlarına, seviyesine ve duygu durumuna göre dinamik olarak oluşturulan kelime haritaları, yüzlerce seçilebilir kategori ve üretken YZ sayesinde oyuncunun girdisine göre oyuncuya özel oluşan kategoriler.
+3. Erişilebilirlik: Tek parmak, tek dokunuş kontrolü; hem off-line hem çevrimiçi mod.
+
+KAZANIMLARI:
+1. Multiplayer oyuncular sosyal bağ kurunca oyunda %35 daha uzun kalır; sosyal sermaye ve duygusal sadakat artar. [Zhong, Z.-J. (2011). The effects of social network sites on adolescents' social and academic development. Journal of the American Society for Information Science and Technology, 62(8), 1435–1445. https://doi.org/10.1002/asi.21540]
+2. Mobil puzzle oyunlarına sosyal rekabet, arkadaş daveti, birlikte oynama gibi özellikler eklendiğinde, oyuncuların oyuna geri dönme oranı (retention) %30–50 artabiliyor. [Lomas, N. (2015). “King’s Candy Crush maker now has 364M MAUs.” TechCrunch & SensorTower, GameRefineriy (2022)]
+3. Puzzle türüne multiplayer turnuva, gerçek zamanlı yarış veya arkadaşla puan karşılaştırma gibi sosyal bileşenler eklenmesi, oyuncu başına gelir (ARPU) ve uygulama içi harcamaları (%15–30) artırıyor. [Kaynak: GameRefinery Insight Report (2021) – Multiplayer features in Match-3 games. GameRefinery Article]
+4. Mobil puzzle oyunlarına Facebook bağlantısı, arkadaş daveti, ortak görevler gibi özellikler eklendiğinde, oyunun organik büyümesi %60’a kadar artabiliyor. [Kaynak: Facebook Gaming Report (2018): “Games with social graph integration outperform in retention and virality.” Adjust Mobile Gaming Report (2023)]
+5. K‑Factor (Virallik): ~0.6 → > 1.0 [AppsFlyer “measurement & marketing analytics”]
+

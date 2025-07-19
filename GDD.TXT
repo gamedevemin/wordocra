@@ -1,0 +1,84 @@
+# DreamScape - Oyun Tasarım Dokümani
+
+## 🎮 Oyun Tanımı
+**DreamScape** – AI destekli, sosyal, tek elle oynanabilen kelime oyunu platformu.
+
+**Vizyon:** Eğitimi eğlenceyle birleştirerek kelime oyunlarında global lider olmak.
+**Slogan:** "Bir kelime daha öğren, daha büyük düşün"
+
+## 🎯 Problem ve Çözüm
+
+**Mevcut Problemler:**
+- Kelime oyunları sosyal değil, tek kişilik
+- Kategori seçenekleri sınırlı
+- Kişiselleştirme yok
+- Erişilebilirlik eksik
+
+**DreamScape Çözümü:**
+- ✅ Gerçek zamanlı multiplayer
+- ✅ AI ile kişiselleştirilmiş kategoriler
+- ✅ Tek elle oynanabilirlik
+- ✅ Görme engelli desteği
+- ✅ Streak ve sosyal rekabet
+
+## 👥 Hedef Kitle
+- **Birincil:** 25-50 yaş kadınlar (%70), mobil oyun severler
+- **Coğrafi:** Türkiye → MENA → Global
+- **Pazar:** 54M Türk oyuncu, $1.2 milyar harcama
+
+## 🚀 Temel Özellikler
+
+**Sosyal:**
+- Arkadaşlarla gerçek zamanlı oyun
+- Liderlik tabloları
+- Topluluk kategorileri
+
+**AI Destekli:**
+- Kişiye özel zorluk ayarı
+- Dinamik kategori önerisi
+- Otomatik seviye üretimi
+
+**Erişilebilirlik:**
+- Tek elle oynanabilir
+- Sesli komutlar
+- Titreşim desteği
+
+## 💰 İş Modeli
+- **Freemium:** %60 IAP (ekstra hamle, premium kategori)
+- **Reklam:** %30 (rewarded/banner)
+- **Premium:** %10 abonelik (reklamsız + özel içerik)
+
+## 📊 Pazar Fırsatı
+- **2025 Kelime Oyunları:** $4.06 milyar (%15.5 büyüme)
+- **Hedef:** İlk 3 yılda %5 pazar payı
+- **Rakipler:** Wordscapes, Words of Wonders (sosyal değil)
+
+## 🛠 Teknoloji
+- **Frontend:** React Native, Unity
+- **Backend:** Firebase, WebSocket
+- **AI:** Kişiselleştirme algoritması
+- **Sosyal:** Gerçek zamanlı multiplayer
+
+## 💵 Finansman İhtiyacı
+- **18 Ay AR-GE:** $750K
+- **Breakdown:** Ekip + Tasarım + Sunucu + Pazarlama
+- **Seed:** $250K (MVP) → Series A: $500K (Lansman)
+
+## 🧠 Psikoloji ve Retention
+- **Streak sistemi** (en güçlü tool)
+- **Günlük bonus** ve bildirimler
+- **Pasif-agresif maskot** karakteri
+- **TikTok/Instagram** psikolojisi + eğitim
+
+## 🌟 Rakiplerden Farkımız
+Türkiye'de tek: **Sosyal + AI + Tek Elle + Kategorize** edilen kelime oyunu yok.
+Global'de eksik: Sosyal multiplayer kelime oyunu pazarında boşluk.
+
+## 📈 Başarı Metrikleri
+- **LTV/CAC:** 3:1 hedefi
+- **Retention:** D7 %30+ (sosyal özelliklerle)
+- **Viral Büyüme:** K-Factor > 1.0
+- **ARPU:** Yüksek (premium + sosyal rekabet)
+
+---
+*Son güncelleme: Başvuru formu verileriyle uyumlu hale getirildi*

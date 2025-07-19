@@ -1,26 +1,563 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wordocra - Proje Donduruldu</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WORDOCRA - Yenilikçi Tek-parmak Kelime Bulmacası</title>
+  <script src="https://cdn.jsdelivr.net/npm/react@18/umd/react.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'dark-bg': '#1a1a1a',
+          },
+          boxShadow: {
+            'neon-white': '0 0 20px rgba(255, 255, 255, 0.1)',
+            'neon-white-lg': '0 0 30px rgba(255, 255, 255, 0.15)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.8s ease-in-out',
+            'slide-up': 'slideUp 0.8s ease-out',
+            'counter': 'counter 2s ease-out',
+            'slide': 'slide 15s infinite linear',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(30px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            counter: {
+              '0%': { transform: 'scale(0.8)', opacity: '0' },
+              '100%': { transform: 'scale(1)', opacity: '1' },
+            },
+            slide: {
+              '0%': { transform: 'translateX(100%)' },
+              '100%': { transform: 'translateX(-100%)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-    <div class="container">
-        <div class="content">
-            <h1>Wordocra</h1>
-            <p class="desc">Wordocra, tek parmakla oynanabilen, YZ destekli kişiselleştirilmiş ve sosyal bir kelime bulmacası olarak, toplumun daralan kelime havuzunu derin ve anadilinde karşılığı olmayan kavramlarla genişletip, çocukluktan sonra ilk kez “yeni kavram!” dopaminini tüm toplulukla aynı anda hissettiren, bu süreci kanıtlanmış bir mekanikle oyunlaştırarak Wordocra’yı bilgi çağının eşsiz bir modülü haline getirmeyi amaçlar.</p>
-            <div class="message">
-                <p>Gazze ve diğer meşguliyetlerden dolayı yeterli ilgiyi bigg sürecine gösteremeyeceğimizden ötürü projemiz donduruldu.</p>
+<body className="bg-dark-bg text-white">
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useEffect, useRef, createContext, useContext } = React;
+
+    // Language Context
+    const LanguageContext = createContext();
+
+    const translations = {
+      tr: {
+        // Navigation
+        concept: "Konsept",
+        problem: "Problem", 
+        solutions: "Çözümler",
+        benefits: "Kazanımlar",
+        support: "Destek",
+        contact: "İletişim",
+        
+        // Hero Section
+        heroTitle: "WORDOCRA",
+        heroSubtitle: "Sosyal Kelime Bulmacası",
+        heroDesc: "Tek-parmak kelime oyunlarının ilkelliğine karşı sosyallik, YZ-güçlü kişiselleştirilmiş deneyim sunarken anadilinde olmayan derin anlamlı kavramları öğretip çocukluktan beri yaşanılmayan 'yeni kavram!' gelişimini ve dopamin salgılatmasını yaşatan eşsiz, sosyal, modern, casual bir Kelime Bulmacasıdır.",
+        
+        // Problem Section
+        problemTitle: "Odaklandığımız Problem",
+        problemDesc: "İnsanların dar ve niteliksiz kelime havuzları.",
+        problemSubtitle: "Farkettiğimiz Eksiklik",
+        problemSubDesc: "Kelime kategorisini domine eden tek elle oynanabilir oyunlar, insanın doğası ve en temel motivasyonu olan sosyalliği karşılıksız bırakmasıyla birlikte kategorisiz, dondurulmuş kelime havuzlarıyla kitle pazarında tekel kurdukları için kullanıcıları yalnız, ilkel ve ilgisiz bırakıyor.",
+        
+        // Motivation Section
+        motivationTitle: "Motivasyonumuz",
+        motivationDesc: "Toplumun daralan kelime havuzunu derin anlamlı, anadilinde karşılığı olmayan kavramlarla genişleterek yeni sinaptik bağlar kurulmasını, hayal ve düşünce dünyalarının gelişmesini sağlayarak 'yeni kavram!' dopaminini tüm toplulukla aynı anda hissettirerek Wordocra'yı bilgi çağının eşsiz bir modülü haline getirmek.",
+        
+        // Solutions Section
+        solutionsTitle: "Çözümlerimiz",
+        solutionsDesc: "Wordocra'nın benzersiz yaklaşımı:",
+        
+        solution1Title: "Çevrimiçi Özellikler",
+        solution1Desc: "Arkadaş listeleri, rekabetçi mod, yerel liderlik tablosu.",
+        
+        solution2Title: "YapayZeka",
+        solution2Desc: "Oyuncunun ilgi alanlarına ve seviyesine göre dinamik olarak oluşturulan tek oyunculu moddaki kelime havuzu, yüzlerce seçilebilir kategori ve üretken YZ sayesinde oyuncunun girdisine göre oyuncuya özel oluşan kategoriler",
+        
+        solution3Title: "Kelime",
+        solution3Desc: "Haftalık kendi anadillerinde olmayan veya olan ama unutlmuş, derin anlamlara sahip, etkili ve düşündürten, kullanıcıya geliştiğini hissettiren ve bunlar neticesinde dopamin salgılatmasını başaran kelimelerin tüm oyunculara aynı kelime olmak üzere sunulması.",
+        
+        // Benefits Section
+        benefitsTitle: "Kanıtlanmış Kazanımlar",
+        benefitsDesc: "Araştırmalarla desteklenen sonuçlar:",
+        
+        benefit1Title: "Sosyal Etkileşim",
+        benefit1Desc: "Multiplayer oyuncular sosyal bağ kurunca oyunda %35 daha uzun kalır; sosyal sermaye ve duygusal sadakat artar.",
+        benefit1Source: "Zhong, Z.-J. (2011). The effects of social network sites on adolescents' social and academic development.",
+        
+        benefit2Title: "Oyuncu Dönüşümü",
+        benefit2Desc: "Mobil puzzle oyunlarına sosyal rekabet, arkadaş daveti, birlikte oynama gibi özellikler eklendiğinde, oyuncuların oyuna geri dönme oranı %30–50 artabiliyor.",
+        benefit2Source: "Lomas, N. (2015). 'King's Candy Crush maker now has 364M MAUs.' TechCrunch & SensorTower, GameRefineriy (2022)",
+        
+        benefit3Title: "Gelir Artışı",
+        benefit3Desc: "Puzzle türüne multiplayer turnuva, gerçek zamanlı yarış veya arkadaşla puan karşılaştırma gibi sosyal bileşenler eklenmesi, oyuncu başına gelir (ARPU) ve uygulama içi harcamaları %15–30 artırıyor.",
+        benefit3Source: "GameRefinery Insight Report (2021) – Multiplayer features in Match-3 games.",
+        
+        benefit4Title: "Organik Büyüme",
+        benefit4Desc: "Mobil puzzle oyunlarına Facebook bağlantısı, arkadaş daveti, ortak görevler gibi özellikler eklendiğinde, oyunun organik büyümesi %60'a kadar artabiliyor.",
+        benefit4Source: "Facebook Gaming Report (2018) & Adjust Mobile Gaming Report (2023)",
+        
+        benefit5Title: "K-Faktörü",
+        benefit5Desc: "K-Factor (Virallik): ~0.6 → > 1.0",
+        benefit5Source: "AppsFlyer 'measurement & marketing analytics'",
+        
+
+        
+        // FAQ Section
+        faqTitle: "Yatırımcı Soruları",
+        faqDesc: "Girişimcilik merkezleri ve yatırımcılar için:",
+        
+        faq1Question: "Pazar büyüklüğü ve büyüme potansiyeli nedir?",
+        faq1Answer: "Global kelime oyunları pazarı $4.06 milyar (2025), %15.5 yıllık büyüme. Türkiye'de 54M oyuncu, $1.2 milyar harcama. Hedef: 3 yılda %5 pazar payı ($20M SOM).",
+        
+        faq2Question: "Rekabet avantajınız ve farklılaşma?",
+        faq2Answer: "WordScapes (200M+ indirme) ve Words of Wonders (150M+ indirme) sosyal özellik yok. Wordocra: İlk sosyal + AI + real-time kombinasyonu. GPT-based kategori üretici, dinamik zorluk algoritması.",
+        
+
+        
+        faq4Question: "Hedef kitleniz ve pazar stratejisi?",
+        faq4Answer: "25-50 yaş kadınlar (%70 market), Türkiye'den başlayıp MENA ve Avrupa'ya genişleme. Kültürel yerellik ve dil zenginliği avantajı.",
+        
+        faq5Question: "MVP özellikleri ve geliştirme süreci?",
+        faq5Answer: "Temel multiplayer + AI kategori üretici + tek elle oynanabilirlik. 18 aylık kademeli geliştirme süreci, beta test topluluğu ile sürekli geri bildirim.",
+        
+
+        
+        faq7Question: "Kelime havuzu nasıl oluşturuluyor?",
+        faq7Answer: "Haftalık derin anlamlı kelimeler, anadilinde olmayan veya unutulmuş kavramlar. AI ile kişiselleştirilmiş kategoriler, kullanıcı yaratımı destekleniyor.",
+        
+        faq8Question: "Bilimsel temelleriniz neler?",
+        faq8Answer: "İnsan sosyal varlık, en çok oynanan oyunlar sosyal. Kelime oyunu genetiklerimizde yatan ilk oyunlardan. Yeni kavram öğrenme dopamin salgılatır.",
+        
+        faq9Question: "Farklı kelime kategorilerine göre dinamik level tasarımları nasıl oluşturuluyor?",
+        faq9Answer: "Yazılım algoritması bu soruna çözüm getiriyor.",
+        
+        // Contact Section
+        contactTitle: "İletişim",
+        contactDesc: "Wordocra hakkında sorularınız var mı?",
+        
+        whatsapp: "WhatsApp",
+        email: "E-posta",
+        linkedin: "LinkedIn",
+        
+        messageNow: "Mesaj Gönder",
+        sendEmail: "E-posta Gönder",
+        connect: "Bağlan",
+        
+        // Footer
+        footerTagline: "Bilgi Çağının Kelime Oyunu Modülü",
+      }
+    };
+
+    const LanguageProvider = ({ children }) => {
+      const [language, setLanguage] = useState('tr');
+      const t = (key) => translations[language][key] || key;
+      return (
+        <LanguageContext.Provider value={{ language, setLanguage, t }}>
+          {children}
+        </LanguageContext.Provider>
+      );
+    };
+
+    const useLanguage = () => {
+      const context = useContext(LanguageContext);
+      if (!context) {
+        throw new Error('useLanguage must be used within a LanguageProvider');
+      }
+      return context;
+    };
+
+    // Custom hook for intersection observer
+    const useInView = (threshold = 0.2) => {
+      const [isInView, setIsInView] = useState(false);
+      const ref = useRef();
+
+      useEffect(() => {
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setIsInView(true);
+            }
+          },
+          { threshold }
+        );
+
+        if (ref.current) {
+          observer.observe(ref.current);
+        }
+
+        return () => observer.disconnect();
+      }, [threshold]);
+
+      return [ref, isInView];
+    };
+
+    const Navigation = () => {
+      const { t } = useLanguage();
+      const [activeSection, setActiveSection] = useState('concept');
+
+      const sections = [
+        { id: 'concept', label: 'Ana Sayfa' },
+        { id: 'problem', label: 'Konsept' },
+        { id: 'benefits', label: t('benefits') },
+        { id: 'faq', label: 'Yatırımcı' },
+        { id: 'contact', label: t('contact') }
+      ];
+
+      const scrollToSection = (sectionId) => {
+        document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+      };
+
+      return (
+        <nav className="fixed top-0 w-full z-50 bg-dark-bg/95 backdrop-blur-sm border-b border-white/10">
+          <div className="max-w-6xl mx-auto px-4 py-4">
+            <div className="flex justify-between items-center">
+              <h1 className="text-2xl font-bold text-white">
+                <span className="text-blue-500">W</span>ordocra
+              </h1>
+              
+              <div className="hidden md:flex items-center space-x-6">
+                {sections.map((section) => (
+                  <button
+                    key={section.id}
+                    onClick={() => scrollToSection(section.id)}
+                    className={`px-3 py-2 rounded transition-all duration-200 text-sm ${
+                      activeSection === section.id
+                        ? 'text-white bg-white/10'
+                        : 'text-gray-300 hover:text-white hover:bg-white/5'
+                    }`}
+                  >
+                    {section.label}
+                  </button>
+                ))}
+              </div>
             </div>
-            <div class="contact">
-                <p>İş birliği için lütfen mesaj atın:</p>
-                <a href="https://wa.me/905373420161" class="whatsapp-btn" target="_blank">
-                    <span>📱 WhatsApp</span>
-                </a>
-            </div>
+          </div>
+        </nav>
+      );
+    };
+
+    const Card = ({ children, className = "" }) => (
+      <div className={`bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/30 transition-colors duration-200 ${className}`}>
+        {children}
+      </div>
+    );
+
+    const AnimatedCard = ({ children, className = "", delay = 0 }) => {
+      const [ref, isInView] = useInView(0.2);
+      
+      return (
+        <div 
+          ref={ref}
+          className={`bg-gray-800/30 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:border-white/30 hover:shadow-neon-white transition-all duration-300 ${
+            isInView ? 'animate-slide-up' : 'opacity-0 translate-y-8'
+          } ${className}`}
+          style={{ animationDelay: `${delay}ms` }}
+        >
+          {children}
         </div>
-    </div>
+      );
+    };
+
+    const Section = ({ id, title, children, className = "" }) => (
+      <section id={id} className={`py-16 ${className}`}>
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12 text-white">
+            {title}
+          </h2>
+          {children}
+        </div>
+      </section>
+    );
+
+    const HeroSection = () => {
+      const { t } = useLanguage();
+      
+      return (
+        <section className="pt-24 pb-16">
+          <div className="max-w-4xl mx-auto px-4 text-center">
+            <div className="flex flex-col md:flex-row items-center justify-center mb-8 animate-fade-in gap-8">
+              <div className="bg-dark-bg rounded-lg p-8 flex-shrink-0">
+                <img src="hero.gif" alt="Hero" className="w-64 h-96 object-contain drop-shadow-lg" loading="lazy" />
+              </div>
+              <div className="text-left">
+                <h1 className="text-6xl font-bold text-white leading-tight mb-4">
+                {t('heroTitle')}
+              </h1>
+                <h2 className="text-2xl text-gray-300 mb-6">
+              {t('heroSubtitle')}
+            </h2>
+                <p className="text-lg text-gray-400 leading-relaxed">
+              {t('heroDesc')}
+            </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    const ProblemMotivationSolutionsSection = () => {
+      const { t } = useLanguage();
+      
+      return (
+        <Section id="problem" title="Wordocra Konsepti">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+              {/* Problem */}
+              <AnimatedCard delay={0}>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🎯</div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{t('problemTitle')}</h3>
+                  <p className="text-gray-300 leading-relaxed mb-6">
+                    {t('problemDesc')}
+                  </p>
+                  <hr className="border-gray-600 mb-6" />
+                  <h4 className="text-lg font-semibold text-white mb-3">{t('problemSubtitle')}</h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    {t('problemSubDesc')}
+                  </p>
+            </div>
+            </AnimatedCard>
+
+              {/* Motivation */}
+              <AnimatedCard delay={100}>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">💡</div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{t('motivationTitle')}</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {t('motivationDesc')}
+                  </p>
+                </div>
+              </AnimatedCard>
+
+                            {/* Solutions */}
+              <AnimatedCard delay={200}>
+                <div className="text-center">
+                  <div className="text-4xl mb-4">🚀</div>
+                  <h3 className="text-xl font-semibold text-white mb-4">{t('solutionsTitle')}</h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    <strong className="text-white">Çevrimiçi Özellikler:</strong> Arkadaş listeleri, rekabetçi mod, yerel liderlik tablosu.<br/><br/>
+                    <strong className="text-white">YapayZeka:</strong> Oyuncunun ilgi alanlarına ve seviyesine göre dinamik olarak oluşturulan tek oyunculu moddaki kelime havuzu, yüzlerce seçilebilir kategori ve üretken YZ sayesinde oyuncunun girdisine göre oyuncuya özel oluşan kategoriler<br/><br/>
+                    <strong className="text-white">Kelime:</strong> Haftalık kendi anadillerinde olmayan veya olan ama unutlmuş, derin anlamlara sahip, etkili ve düşündürten, kullanıcıya geliştiğini hissettiren ve bunlar neticesinde dopamin salgılatmasını başaran kelimelerin tüm oyunculara aynı kelime olmak üzere sunulması.
+                  </p>
+                </div>
+              </AnimatedCard>
+            </div>
+          </div>
+        </Section>
+      );
+    };
+
+    const BenefitsSection = () => {
+      const { t } = useLanguage();
+      
+      return (
+        <Section id="benefits" title={t('benefitsTitle')}>
+          <div className="max-w-5xl mx-auto">
+            <p className="text-lg text-gray-300 text-center mb-12">
+              {t('benefitsDesc')}
+            </p>
+            
+            <div className="space-y-6">
+              <AnimatedCard delay={0}>
+                <h3 className="text-xl font-semibold text-white mb-3">{t('benefit1Title')}</h3>
+                <p className="text-gray-300 mb-2">{t('benefit1Desc')}</p>
+                <p className="text-sm text-gray-400 italic">{t('benefit1Source')}</p>
+              </AnimatedCard>
+              
+              <AnimatedCard delay={100}>
+                <h3 className="text-xl font-semibold text-white mb-3">{t('benefit2Title')}</h3>
+                <p className="text-gray-300 mb-2">{t('benefit2Desc')}</p>
+                <p className="text-sm text-gray-400 italic">{t('benefit2Source')}</p>
+              </AnimatedCard>
+              
+              <AnimatedCard delay={200}>
+                <h3 className="text-xl font-semibold text-white mb-3">{t('benefit3Title')}</h3>
+                <p className="text-gray-300 mb-2">{t('benefit3Desc')}</p>
+                <p className="text-sm text-gray-400 italic">{t('benefit3Source')}</p>
+              </AnimatedCard>
+              
+              <AnimatedCard delay={300}>
+                <h3 className="text-xl font-semibold text-white mb-3">{t('benefit4Title')}</h3>
+                <p className="text-gray-300 mb-2">{t('benefit4Desc')}</p>
+                <p className="text-sm text-gray-400 italic">{t('benefit4Source')}</p>
+              </AnimatedCard>
+
+              <AnimatedCard delay={400}>
+                <h3 className="text-xl font-semibold text-white mb-3">{t('benefit5Title')}</h3>
+                <p className="text-gray-300 mb-2">{t('benefit5Desc')}</p>
+                <p className="text-sm text-gray-400 italic">{t('benefit5Source')}</p>
+              </AnimatedCard>
+            </div>
+          </div>
+        </Section>
+      );
+    };
+
+
+
+    const FAQSection = () => {
+      const { t } = useLanguage();
+      
+      return (
+        <Section id="faq" title={t('faqTitle')}>
+          <div className="max-w-6xl mx-auto">
+            <p className="text-lg text-gray-300 text-center mb-12">
+              {t('faqDesc')}
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <Card className="hover:shadow-neon-white">
+                <h3 className="text-lg font-semibold text-white mb-3">{t('faq1Question')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('faq1Answer')}</p>
+              </Card>
+              
+              <Card className="hover:shadow-neon-white">
+                <h3 className="text-lg font-semibold text-white mb-3">{t('faq2Question')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('faq2Answer')}</p>
+              </Card>
+              
+
+              
+              <Card className="hover:shadow-neon-white">
+                <h3 className="text-lg font-semibold text-white mb-3">{t('faq4Question')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('faq4Answer')}</p>
+              </Card>
+              
+              <Card className="hover:shadow-neon-white">
+                <h3 className="text-lg font-semibold text-white mb-3">{t('faq5Question')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('faq5Answer')}</p>
+              </Card>
+              
+
+              
+              <Card className="hover:shadow-neon-white">
+                <h3 className="text-lg font-semibold text-white mb-3">{t('faq7Question')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('faq7Answer')}</p>
+              </Card>
+              
+              <Card className="hover:shadow-neon-white">
+                <h3 className="text-lg font-semibold text-white mb-3">{t('faq8Question')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('faq8Answer')}</p>
+              </Card>
+              
+              <Card className="hover:shadow-neon-white">
+                <h3 className="text-lg font-semibold text-white mb-3">{t('faq9Question')}</h3>
+                <p className="text-gray-300 leading-relaxed">{t('faq9Answer')}</p>
+              </Card>
+            </div>
+          </div>
+        </Section>
+      );
+    };
+
+    const ContactSection = () => {
+      const { t } = useLanguage();
+      
+      return (
+        <Section id="contact" title={t('contactTitle')}>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-gray-300 text-center mb-12">
+              {t('contactDesc')}
+            </p>
+            
+            <div className="grid grid-cols-3 gap-6">
+              <Card className="text-center hover:shadow-neon-white">
+                <a href="https://wa.me/905373420161" className="block hover:text-white transition-colors">
+                  <div className="text-4xl mb-4">📱</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('whatsapp')}</h3>
+                  <p className="text-gray-300 mb-3">+90 537 342 0161</p>
+                  <button className="bg-white/10 text-gray-300 rounded-full px-4 py-2 text-sm hover:bg-white/20 hover:text-white transition-colors">
+                    {t('messageNow')}
+                  </button>
+                </a>
+              </Card>
+
+              <Card className="text-center hover:shadow-neon-white">
+                <a href="mailto:emntarcin@tutamail.com" className="block hover:text-white transition-colors">
+                  <div className="text-4xl mb-4">📧</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('email')}</h3>
+                  <p className="text-gray-300 mb-3">emntarcin@tutamail.com</p>
+                  <button className="bg-white/10 text-gray-300 rounded-full px-4 py-2 text-sm hover:bg-white/20 hover:text-white transition-colors">
+                    {t('sendEmail')}
+                  </button>
+                </a>
+              </Card>
+
+              <Card className="text-center hover:shadow-neon-white">
+                <a href="https://www.linkedin.com/in/emincelenk/" className="block hover:text-white transition-colors">
+                  <div className="text-4xl mb-4">💼</div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{t('linkedin')}</h3>
+                  <p className="text-gray-300 mb-3">emincelenk</p>
+                  <button className="bg-white/10 text-gray-300 rounded-full px-4 py-2 text-sm hover:bg-white/20 hover:text-white transition-colors">
+                    {t('connect')}
+                  </button>
+                </a>
+              </Card>
+            </div>
+          </div>
+        </Section>
+      );
+    };
+
+    const Footer = () => {
+      const { t } = useLanguage();
+      
+      return (
+        <footer className="bg-gray-900/50 border-t border-white/10 py-12">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">
+                <span className="text-blue-500">W</span>ordocra
+              </h3>
+              <p className="text-gray-400 mb-6">
+                  {t('footerTagline')}
+                </p>
+
+              </div>
+
+          </div>
+        </footer>
+      );
+    };
+
+    const App = () => {
+      return (
+        <LanguageProvider>
+          <div className="min-h-screen bg-dark-bg text-white">
+            <Navigation />
+            <main>
+              <HeroSection />
+              <ProblemMotivationSolutionsSection />
+              <BenefitsSection />
+              <FAQSection />
+              <ContactSection />
+            </main>
+            <Footer />
+          </div>
+        </LanguageProvider>
+      );
+    };
+
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
 </body>
-</html> 
+</html>

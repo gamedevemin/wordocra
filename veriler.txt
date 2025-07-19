@@ -1,0 +1,165 @@
+🎮 GENEL OYUN SEKTÖRÜ GELİRLERİ (2000–2024)
+ 
+    ⭐ 2025 Tahmini Gelir: $733.22 Milyar [STATISTA]
+    ⭐ 2024 mobil oyun geliri: $92.6 milyar (%49) – [Newzoo, 2024]
+    ⭐ Tüm zamanların oyun geliri (2000–2024 tahmini): ≈ 3.5 trilyon USD – [Newzoo + Statista analiz]
+    ⭐ Tüm zamanlarda mobil oyunların katkısı: ≈ 800 milyar USD – [Statista + Newzoo]
+
+
+🎮 CASUAL OYUN SEKTÖRÜ
+
+    ⭐ En hızlı büyüyen tür: Casual (Puzzle & Word dâhil) – [SensorTower, 2024]
+    ⭐ Harcayan oyuncu sayısında artış – [SensorTower, 2024]
+
+
+📱 MOBİL OYUN SEKTÖRÜ
+
+    ⭐ 2024 Kasım ayı mobil harcaması: $6.54 milyar – [SensorTower, Kasım 2024 Mobil Raporu]
+    ⭐ Mobil oyunların genel payı: ~%49 – [Newzoo, 2024]
+
+
+🧩 PUZZLE OYUN SEKTÖRÜ
+
+       2025 Puzzle Games Market: $22.95 Milyar [STATİSTA]
+
+    ⭐ 2025 en çok indirilen oyun: Block Blast (Puzzle) – [SensorTower, 2025]
+
+    ⭐ 2024 puzzle IAP geliri: $12.2 milyar – [SensorTower, 2024]
+
+    ⭐ 2024 puzzle indirme sayısı: 9.7 milyar (%20 tüm indirmeler) – [SensorTower, 2024]
+
+    YoY gelir artışı: +14%
+
+    YoY indirme düşüşü: –3%
+
+    ⭐ 2024 puzzle oyunlarının toplam IAP payı: %14.9
+
+    Gelire göre oyun türü sıralaması: #3 – [SensorTower]
+
+    Zaman harcama sıralaması: 4. sırada – [SensorTower]
+
+
+🔤 WORD (KELİME) OYUNLARI
+
+    ⭐ 2025 toplam gelir: $4.06 milyar – [Statista, 2025 Forecast]
+
+    ⭐ 2025 pazar büyümesi (YoY): +15.5% – [Statista]
+
+    ⭐ 2023 organik indirme oranı: %44 – [Applovin]
+
+    ⭐ 2022 reklam geliri: $1.93 milyar – [Statista]
+
+    ⭐ 2022 IAP geliri: $444.71 milyon
+
+    ⭐ 2022 indirme sayısı: 1.42 milyar
+
+    ⭐ 2022 indirme başına gelir: $1.68
+
+    ⭐ ABD toplam geliri (2022): $1.85 milyar
+
+    CPM ortalaması (Applovin): $6.09
+
+    Retention (D1): Orta-üst – [Applovin]
+
+👉 TEK ELLE OYNANAN WORD OYUNLARI – Performans Verileri
+
+    Başarılı oyunların ortak noktaları: Yüksek ARPU, güçlü organik büyüme, tek elle oynanabilirlik, basit ama yüksek görsel kalite – [SensorTower + Applovin]
+
+    Install range: 100M–500M – [SensorTower]
+
+    Son ay dünya indirmeleri: 2M 800K + 400K + 200K + 180K + 100K + 80K + 40K– [SensorTower]
+
+    Son ay dünya gelirleri: $1M + $400K + $300K + $200K + $100K + $60K + – [SensorTower]
+
+    ABD Word kategorisi sıralaması: 6. sırada – [SensorTower]
+
+    Toplam indirme örnekleri:
+
+        Wordscapes: ~200M IOS + PLAYSTORE
+
+        Words of Wonderers: ~200M IOS + PLAYSTORE
+
+        (PLAYSTORE toplam: 500m+) – [SensorTower] 
+
+👥 HEDEF KİTLE PROFİLİ
+
+    ⭐ Puzzle oyuncularının %70’i kadın – [SensorTower + Applovin]
+
+    ⭐ Yaş aralığı: Genellikle 25–50 – [Applovin]
+
+    Kelime oyunlarında İngilizce oyunlar: Kuzey Amerika ve Avrupa’da yüksek ARPU – [Statista]
+
+BİLİMSEL DELİLLER
+Multiplayer oynayan kullanıcılar, oyunda arkadaş edinme ve sosyal bağ kurma gibi nedenlerle daha uzun süre kalıyor. Bu da sosyal sermaye ve duygusal bağlılık oluşturuyor.   
+Kaynak: Zhong, Z.-J. (2011). "The effects of social network sites on adolescents' social and academic development: Current theories and controversies." Journal of the American Society for Information Science and Technology, 62(8), 1435–1445. 📘 DOI: 10.1002/asi.21540
+Mobil puzzle oyunlarına sosyal rekabet, arkadaş daveti, birlikte oynama gibi özellikler eklendiğinde, oyuncuların oyuna geri dönme oranı (retention) %30–50 artabiliyor. 
+Kaynak: Lomas, N. (2015). “King’s Candy Crush maker now has 364M MAUs.” TechCrunch.
+Sensor Tower ve GameRefinery Raporları (2022): Social play özellikleri olan puzzle oyunlarında retention süresi 2.5x daha uzun.
+Puzzle türüne multiplayer turnuva, gerçek zamanlı yarış veya arkadaşla puan karşılaştırma gibi sosyal bileşenler eklenmesi, oyuncu başına gelir (ARPU) ve uygulama içi harcamaları (%15–30) artırıyor. 
+Kaynak: GameRefinery Insight Report (2021) – Multiplayer features in Match-3 games. GameRefinery Article
+Mobil puzzle oyunlarına Facebook bağlantısı, arkadaş daveti, ortak görevler gibi özellikler eklendiğinde, oyunun organik büyümesi %60’a kadar artabiliyor. 
+Kaynak: Facebook Gaming Report (2018): “Games with social graph integration outperform in retention and virality.” Adjust Mobile Gaming Report (2023)
+D7 Retention: %20 → ~30–35 
+📚 Kaynaklar:  “D7 retention: anything above 20% is good” gameanalytics.com
+Session Length: ~24 dk → ~35 dk 
+📚 Kaynaklar: Ortalama puzzle oturum: 23.89 dk (2023) → 24.48 dk (2024) Adjust 
+Arkadaşla oynama ve gerçek zamanlı yarışmalar, ortalama oturum süresini %40–50 uzatıyor. 
+K: Game Dev Reports
+K‑Factor (Virallik): ~0.6 → > 1.0
+📚 Kaynak: AppsFlyer “measurement & marketing analytics” k‑factor tanımı
+LTV (¥1.00–2.00) / CAC Oranı: ~2 → ≥ 3
+📚 Kaynaklar: Puzzle oyunlarında LTV: $1.00–2.00 Segwise
+K: “top %10 ürünler ortalama oranın 2 katı performans” Scribd
+DAU/MAU Oranı: %18–20 → %28–30
+📚 Kaynak: DAU/MAU benchmark rehberi Mixpanel
+“top %10 ürünler ortalama oranın 2 katı performans” Scribd
+Invite Conversion: %5–8 → %12–15
+📚 Kaynak: Appsflyer viral büyüme endeksi (genel invite benchmark)
+        AppsFlyer
+
+
+
+ONLİNE ARTILARI
+
+- Araştırmalar, bulmaca ve kelime oyunu oynamanın beyne faydalı olduğunu gösteriyor.
+- Sosyal etkileşimli oyunlarda dopamin tepkisi artıyor.
+- Online sosyal etkileşim özellikleri (arkadaşlarla oynama, skor karşılaştırma, sohbet, vs.) oyuncu sadakatini ve retention'ı ciddi oranda artırıyor.
+- Multiplayer oynayan kullanıcılar, oyunda arkadaş edinme ve sosyal bağ kurma gibi nedenlerle daha uzun süre kalıyor. Bu da sosyal sermaye ve duygusal bağlılık oluşturuyor.
+- Mobil puzzle oyunlarına sosyal rekabet, arkadaş daveti, birlikte oynama gibi özellikler eklendiğinde, oyuncuların oyuna geri dönme oranı (retention) %30–50 artabiliyor.
+- Puzzle türüne multiplayer turnuva, gerçek zamanlı yarış veya arkadaşla puan karşılaştırma gibi sosyal bileşenler eklenmesi, oyuncu başına gelir (ARPU) ve uygulama içi harcamaları (%15–30) artırıyor.
+- Mobil puzzle oyunlarına Facebook bağlantısı, arkadaş daveti, ortak görevler gibi özellikler eklendiğinde, oyunun organik büyümesi %60’a kadar artabiliyor.
+- Session Length: ~24 dk → ~35 dk
+- Arkadaşla oynama ve gerçek zamanlı yarışmalar, ortalama oturum süresini %40–50 uzatıyor.
+- K‑Factor (Virallik): ~0.6 → > 1.0
+- LTV (¥1.00–2.00) / CAC Oranı: ~2 → ≥ 3
+- DAU/MAU Oranı: %18–20 → %28–30
+- Invite Conversion: %5–8 → %12–15
+
+
+
+📚 KAYNAKLAR (Tam Liste)
+Kaynak	Açıklama
+Newzoo	Global Games Market Reports (2016–2024)
+Statista	Mobil, kelime, puzzle pazar verileri ve projeksiyonlar
+SensorTower (K.ST)	Mobil oyun indirme, gelir ve trend raporları
+Applovin	Word oyunları reklam, ARPU, kullanıcı verileri
+TechCrunch	Dream Games yatırım ve başarı haberleri
+
+-----
+
+**1. ONLINE MULTIPLAYER MOD:**
+🎮 Özellik: Oyuncular arkadaşlarıyla veya rastgele eşleşmelerle gerçek zamanlı oynar
+🎯 Etki: Sosyal bağ kurma + dopamin artışı + rekabet heyecanı
+📈 Beklenen Sonuç: Day 7 retention %50+ artış
+
+**2. TEK ELLE OYNANABİLİRLİK:**
+🎮 Özellik: Mobil kullanım kolaylığı + toplumsal etkileşim pratik şekilde sağlanır
+🎯 Etki: Her yerden erişim + sosyal oyun engel olmadan
+📈 Beklenen Sonuç: Günlük aktif kullanım artışı
+
+**3. KATEGORİ/BÖLÜM OLUŞTURMA:**
+🎮 Özellik: Kullanıcı kendi içeriğini oluşturup paylaşır
+🎯 Etki: Sosyal üretim + bağ kurma + community building
+📈 Beklenen Sonuç: User-generated content + viral growth
+
+✅ **Pazar Boşluğu Mevcut**: Tek elle + sosyal kombinasyonu eksik tüm mobil oyun pazarında ve word kategorisinde.
